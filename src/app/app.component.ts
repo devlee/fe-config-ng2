@@ -19,7 +19,12 @@ import { AppState } from './app.service';
     require('./app.css')
   ],
   template: `
-      <h1>Hello World</h1>
+    <md-card>
+      <md-card-title>DEMONE</md-card-title>
+      <md-card-actions>
+        <button md-button color="primary">Hello</button>
+      </md-card-actions>
+    </md-card>
     `
 })
 export class App {
