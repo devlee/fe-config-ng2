@@ -13,7 +13,12 @@ import { ENV_PROVIDERS } from './platform/environment';
 * App Component
 * our top level component that holds all of our components
 */
-import { App, APP_PROVIDERS } from './app';
+import { AppComponent, APP_PROVIDERS } from './app';
+
+// Angular 2 UIRouter
+import {trace, UiView, Category} from 'ui-router-ng2';
+
+trace.enable(Category.TRANSITION, Category.VIEWCONFIG);
 
 /*
  * Bootstrap our Angular app with a top level component `App` and inject
@@ -21,7 +26,7 @@ import { App, APP_PROVIDERS } from './app';
  */
 export function main(initialHmrState?: any): Promise<any> {
 
-  return bootstrap(App, [
+  return bootstrap(UiView, [
     ...PROVIDERS,
     ...ENV_PROVIDERS,
     ...DIRECTIVES,

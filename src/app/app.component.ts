@@ -3,7 +3,13 @@
  */
 import { Component, ViewEncapsulation } from '@angular/core';
 
+import { UIROUTER_DIRECTIVES } from 'ui-router-ng2';
+
 import { AppState } from './app.service';
+
+import { AppHeader } from './header';
+
+import { AppFooter } from './footer';
 
 /*
  * App Component
@@ -13,25 +19,21 @@ import { AppState } from './app.service';
   selector: 'app',
   pipes: [ ],
   providers: [ ],
-  directives: [ ],
+  directives: [ UIROUTER_DIRECTIVES, AppHeader, AppFooter ],
   encapsulation: ViewEncapsulation.None,
   styles: [
     require('./app.css')
   ],
   template: `
-    <md-card>
-      <md-card-title>DEMONE</md-card-title>
-      <md-card-actions>
-        <button md-button color="primary">Hello</button>
-      </md-card-actions>
-    </md-card>
+    <app-header></app-header>
+    <app-footer></app-footer>
     `
 })
-export class App {
-  angularclassLogo = 'assets/img/angularclass-avatar.png';
-  loading = false;
-  name = 'fe-config-ng2';
-  email = 'devlee@outlook.com';
+export class AppComponent {
+  public angularclassLogo: String = 'assets/img/angularclass-avatar.png';
+  public loading: boolean = false;
+  public name: String = 'fe-config-ng2';
+  public email: String = 'devlee@outlook.com';
 
   constructor(
     public appState: AppState) {

@@ -1,0 +1,32 @@
+:host {
+  display: block;
+}
+
+header {
+  height: 100px;
+}
+
+main {
+  position: relative;
+  height: 500px;
+}
+
+footer {
+  height: 100px;
+}
+
+.aside {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 30%;
+}
+
+.main-right {
+  padding-left: 30%;
+}
+
+.container {
+  min-width: 1200px;
+  margin: 0 auto;
+}

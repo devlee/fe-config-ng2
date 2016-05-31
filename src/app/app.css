@@ -1,8 +1,21 @@
 html {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 14px;
+  color: #787878;
+  line-height: 1;
 }
 
 body {
   margin: 0;
   padding: 0;
+}
+
+app {
+  display: block;
+}
+
+.center {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 auto;
 }
