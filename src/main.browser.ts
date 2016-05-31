@@ -13,7 +13,7 @@ import { ENV_PROVIDERS } from './platform/environment';
 * App Component
 * our top level component that holds all of our components
 */
-import { AppComponent, APP_PROVIDERS } from './app';
+import { APP_PROVIDERS } from './app';
 
 // Angular 2 UIRouter
 import {trace, UiView, Category} from 'ui-router-ng2';

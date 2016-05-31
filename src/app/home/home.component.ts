@@ -1,18 +1,14 @@
 import { Component } from '@angular/core';
 
-import { Layout } from '../layout';
-
-import { HomeHeader } from './homeHeader';
-
 @Component({
   selector: 'home',
-  directives: [ Layout ],
+  directives: [  ],
   styles: [
     require('./home.css')
   ],
   template: require('./home.html')
 })
-export class Home {
+export class HomeComponent {
   constructor() {
     console.log('Home loaded');
   }

@@ -26,6 +26,7 @@ import { AppFooter } from './footer';
   ],
   template: `
     <app-header></app-header>
+    <ui-view></ui-view>
     <app-footer></app-footer>
     `
 })

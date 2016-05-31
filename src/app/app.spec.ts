@@ -6,10 +6,10 @@ import {
 } from '@angular/core/testing';
 
 // Load the implementations that should be tested
-import { App } from './app.component';
+import { AppComponent } from './app.component';
 import { AppState } from './app.service';
 
-describe('App', () => {
+describe('AppComponent', () => {
   // provide our implementations or mocks to the dependency injector
   beforeEachProviders(() => [
     AppState,

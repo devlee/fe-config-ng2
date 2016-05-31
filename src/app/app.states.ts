@@ -1,6 +1,9 @@
 import {AppComponent} from './app.component';
 import {Ng2StateDeclaration} from 'ui-router-ng2/ng2/interface';
 
+import {HOME_STATES} from './home/home.states';
+import {ABOUT_STATES} from './about/about.states';
+
 /**
  * This file exports all the application states as an array.
  *
@@ -22,4 +25,6 @@ let MAIN_STATES: Ng2StateDeclaration[] = [
 // Combine MAIN_STATES, FOO_STATES, and BAR_STATES and export them.
 // This array is imported in bootstrap/router.config.ts, then each state is registered
 export let INITIAL_STATES: Ng2StateDeclaration[] =
-    MAIN_STATES; // .concat(FOO_STATES).concat(BAR_STATES).concat(BAZ_STATES)
+    MAIN_STATES
+    .concat(HOME_STATES)
+    .concat(ABOUT_STATES);

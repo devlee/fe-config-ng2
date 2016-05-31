@@ -1,7 +1,10 @@
 <header class="app-header">
   <ul>
     <li>
-      <a href="/#home">HOME</a>
+      <a uiSref="app.home" [uiOptions]="{ inherit: false }" uiSrefActive="active">Home</a>
+    </li>
+    <li>
+      <a uiSref="app.about" [uiOptions]="{ inherit: false }" uiSrefActive="active">About</a>
     </li>
   </ul>
 </header>
