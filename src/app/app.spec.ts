@@ -13,10 +13,10 @@ describe('AppComponent', () => {
   // provide our implementations or mocks to the dependency injector
   beforeEachProviders(() => [
     AppState,
-    App
+    AppComponent
   ]);
 
-  it('should have a email', inject([ App ], (app) => {
+  it('should have a email', inject([ AppComponent ], (app) => {
     expect(app.email).toEqual('devlee@outlook.com');
   }));
 

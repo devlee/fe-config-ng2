@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
   styles: [
     require('./header.css')
   ],
-  template: require('./header.html');
+  template: require('./header.html')
 })
 export class AppHeader {
   constructor() {

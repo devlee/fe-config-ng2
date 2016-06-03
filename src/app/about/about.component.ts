@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AboutService } from './about.service';
 
 @Component({
   selector: 'about',
@@ -8,7 +9,7 @@ import { Component } from '@angular/core';
   template: require('./about.html')
 })
 export class AboutComponent {
-  constructor() {
+  constructor(private aboutService: AboutService) {
     console.log('About Loaded');
   }
 
