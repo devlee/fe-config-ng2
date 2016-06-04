@@ -10,7 +10,7 @@ import { FORM_PROVIDERS,
          PlatformLocation} from '@angular/common';
 import { BrowserPlatformLocation } from '@angular/platform-browser';
 // Angular 2 Http
-import { HTTP_PROVIDERS } from '@angular/http';
+import { HTTP_PROVIDERS, JSONP_PROVIDERS } from '@angular/http';
 // Angular 2 Router
 // import { ROUTER_PROVIDERS } from '@angular/router-deprecated';
 // Angular 2 UIRouter
@@ -27,6 +27,7 @@ import { MATERIAL_PROVIDERS } from './angular2-material2';
 export const APPLICATION_PROVIDERS = [
   ...FORM_PROVIDERS,
   ...HTTP_PROVIDERS,
+  ...JSONP_PROVIDERS,
   // ...ROUTER_PROVIDERS,
   ...MATERIAL_PROVIDERS,
   ...UIROUTER_PROVIDERS,

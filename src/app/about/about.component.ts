@@ -11,6 +11,11 @@ import { AboutService } from './about.service';
 export class AboutComponent {
   constructor(private aboutService: AboutService) {
     console.log('About Loaded');
+    aboutService.getAuthorName()
+                .subscribe(
+                  data => console.log(data, 1),
+                  err => console.error(err, 2)
+                 );
   }
 
   ngOnInit() {
