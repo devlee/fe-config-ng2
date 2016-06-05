@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Jsonp, Response } from '@angular/http';
+import { Http, Response } from '@angular/http';
 
 import { Observable } from 'rxjs/Observable';
 
@@ -9,7 +9,7 @@ export class AboutService {
     name: 'default name',
     email: 'devlee@outlook.com'
   };
-  constructor(private jsonp: Jsonp) {
+  constructor(private http: Http) {
 
   }
 
@@ -31,7 +31,7 @@ export class AboutService {
   }
 
   getAuthorName(): Observable<string> {
-    return this.jsonp.get('http://localhost:3000/api/author/name?callback=JSONP_CALLBACK')
+    return this.http.post('/api/author', {}.toString())
                      .map((res: Response) => {
                        return res.json() || {};
                      })

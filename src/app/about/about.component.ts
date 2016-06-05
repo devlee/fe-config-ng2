@@ -13,7 +13,9 @@ export class AboutComponent {
     console.log('About Loaded');
     aboutService.getAuthorName()
                 .subscribe(
-                  data => console.log(data, 1),
+                  (data: any) => {
+                    aboutService.set('name', data.name);
+                  },
                   err => console.error(err, 2)
                  );
   }
